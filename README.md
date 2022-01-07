@@ -37,7 +37,7 @@ def derive_wallets(mnemonic,coin):
 4. Expect an output of the following: 
 <p align="center"><b>derive wallets</b></p>
 <p align="center">
-  <src="https://github.com/jayxcao/week19-homework/blob/main/Images/step4output.PNG">
+  <img width="460" src="https://github.com/jayxcao/week19-homework/blob/main/Images/step4output.PNG">
 </p>
 
 5. We now need to create an account from the private keys generated from above to start loading some faucet and transfer it between accounts. The following code turns the private key generated from the mneumonics into an account we can use. 
