@@ -1,0 +1,48 @@
+**--------------installing hd-wallet-derive -----------------**
+
+1. Create a symlink called derive for the hd-wallet-derive/hd-wallet-derive.php script. This will clean up the command needed to run the script in our code, as we can call ./derive instead of ./hd-wallet-derive/hd-wallet-derive.php:
+
+
+2. Make sure you are in the top level project directory - in this case the directory named wallet.
+
+
+
+
+Windows Users: Creating symlinks is not supported by default on Windows, only reading them, so Windows users must perform the following steps:
+3. Open up Git-Bash as an administrator (right-click on Git-Bash in the start menu).
+
+
+4. Within bash, run the command export MSYS=winsymlinks:nativestrict.
+
+5. Run the following command: ln -s hd-wallet-derive/hd-wallet-derive.php derive.
+
+
+
+6. Test that you can run the ./derive script properly, by running the following command.
+
+
+./derive --mnemonic="tattoo explain hedgehog talk visa lucky essence morning hammer enroll couch expand" --cols=path,address --coin=ETH --numderive=3 -g
+
+
+7. The output should match what you see below:
+
+
++------------------+--------------------------------------------+
+| path             | address                                    |
++------------------+--------------------------------------------+
+| m/44'/60'/0'/0/0 | 0x3053E4D83Eb0a8C21CD2edBfcBaE205319b271D3 |
+| m/44'/60'/0'/0/1 | 0xf4Ad3d8661C49D13113D1a656D943932521B4F3d |
+| m/44'/60'/0'/0/2 | 0xf4dCe8041Cfeb9E493395738A3443491c08A1011 |
++------------------+--------------------------------------------+
+
+
+
+**----------- pip install requirements --------------**
+
+subprocess
+json
+from dotenv import load_dotenv
+bit
+from web3 import Web3, middleware, Account
+from web3.gas_strategies.time_based import medium_gas_price_strategy
+from web3.middleware import geth_poa_middleware
