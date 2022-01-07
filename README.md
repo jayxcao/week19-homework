@@ -1,15 +1,14 @@
 # Blockchain with Python
 
 
-## Introduction - Machine Learning and Risk mitigation in Finance <a name="intro"></a>
+## Introduction - Blockchain with Python <a name="intro"></a>
 
-The financial sector in which operates throughout the world as we know, is arguably the most predominant and most influential industry throughout.
+Your new startup is focusing on building a portfolio management system that supports not only traditional assets like gold, silver, stocks, etc, but crypto-assets as well! The problem is, there are so many coins out there! It's a good thing you understand how HD wallets work, since you'll need to build out a system that can create them. You're in a race to get to the market. There aren't as many tools available in Python for this sort of thing, yet.
+Thankfully, you've found a command line tool, hd-wallet-derive that supports not only BIP32, BIP39, and BIP44, but
+also supports non-standard derivation paths for the most popular wallets out there today! However, you need to integrate
+the script into your backend with your dear old friend, Python.
 
-As in any industry and any society, no matter how advanced or behind, there is always ways and opportunities to cheat the system, and gain and leverage mis-information or poor security & operations, in order for financial gain.
-
-As the world evolves and technology advances, we see more and more cases of fraud and data theft within the financial sector each year, costing businesses, individuals, and the economy billions of dollars.
-
-The Purpose of this project is to use and develope machine learning models to prove the importance and the effectiveness of this technology in the industry, and how it should be implemented across the board.
+We will start with generate the a mneumonic for a set of keys which we will turn into accounts to transfer coins between.
 
 ## Narrative of code <a name="para1"></a>
 
@@ -38,7 +37,7 @@ def derive_wallets(mnemonic,coin):
 4. Expect an output of the following: 
 <p align="center"><b>derive wallets</b></p>
 <p align="center">
-  <img width="460" height="300" src="https://github.com/jayxcao/week19-homework/blob/main/Images/step4output.PNG">
+  <src="https://github.com/jayxcao/week19-homework/blob/main/Images/step4output.PNG">
 </p>
 
 5. We now need to create an account from the private keys generated from above to start loading some faucet and transfer it between accounts. The following code turns the private key generated from the mneumonics into an account we can use. 
