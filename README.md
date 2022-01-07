@@ -16,6 +16,12 @@ The Purpose of this project is to use and develope machine learning models to pr
 1. Using the following website, https://iancoleman.io/bip39/
 2. Generate a 12 word mnemonics, making sure the "Coin" is selected for ETH. This will be used as the basis of address for moving ETH between accounts. Copy the 12 words into the .env and assign it to a constant called 'mnemonic'. 
 
+<p align="center"><b>https://iancoleman.io/bip39/</b></p>
+<p align="center">
+  <img width="460" height="300" src="https://github.com/jayxcao/week19-homework/blob/main/Images/BIP39%20generate.PNG">
+</p>
+
+
 3. Using the mneumonic constant, generate the public, private keys and address for the exercise, limiting the accounts to 3. The following code will parse the mnewmonic and the coin (ETH).
 
 
@@ -29,10 +35,10 @@ def derive_wallets(mnemonic,coin):
 }
 ```
 
-4. Expect an output of the following: insert pic
-<p align="center"><b>Confusion Matrix</b></p>
+4. Expect an output of the following: 
+<p align="center"><b>derive wallets</b></p>
 <p align="center">
-  <img width="460" height="300" src="https://github.com/chirathlv/project2/blob/chirath/Images/cm_lr_clf.png">
+  <img width="460" height="300" src="https://github.com/jayxcao/week19-homework/blob/main/Images/step4output.PNG">
 </p>
 
 5. We now need to create an account from the private keys generated from above to start loading some faucet and transfer it between accounts. The following code turns the private key generated from the mneumonics into an account we can use. 
@@ -45,11 +51,11 @@ def priv_key_to_account(coins,priv_key):
 eth_acc = priv_key_to_account(ETH, derive_wallets(mnemonic, ETH)[2]['privkey'])
 ```
 
-6. It is now time to load some faucet (100ETH) into each account of the mneumonics, I have generated the same accounts in Ganache using localhost network as such: insert pic
+6. It is now time to load some faucet (100ETH) into each account of the mneumonics, I have generated the same accounts in Ganache using localhost network as such:
 
-<p align="center"><b>Confusion Matrix</b></p>
+<p align="center"><b>Ganache</b></p>
 <p align="center">
-  <img width="460" height="300" src="https://github.com/chirathlv/project2/blob/chirath/Images/cm_lr_clf.png">
+  <img width="460" height="300" src="https://github.com/jayxcao/week19-homework/blob/main/Images/step6output.PNG">
 </p>
 
 
@@ -92,8 +98,8 @@ send_tx(ETH,eth_acc,"0xf4Ad3d8661C49D13113D1a656D943932521B4F3d", 11)
 9. Transaction has been submitted to the blockchain:
 
 insert pic
-<p align="center"><b>Confusion Matrix</b></p>
+<p align="center"><b>Transaction on blockchain</b></p>
 <p align="center">
-  <img width="460" height="300" src="https://github.com/chirathlv/project2/blob/chirath/Images/cm_lr_clf.png">
+  <img width="460" height="300" src="https://github.com/jayxcao/week19-homework/blob/main/Images/step9output.PNG">
 </p>
 
